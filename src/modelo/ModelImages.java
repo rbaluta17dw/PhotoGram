@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import config.Conector;
+import config.Connector;
 
-public class ModelImages extends Conector {
+public class ModelImages extends Connector {
 	
 	public ArrayList<Images> selectAll(){
 		ArrayList<Images> images = new ArrayList<Images>();

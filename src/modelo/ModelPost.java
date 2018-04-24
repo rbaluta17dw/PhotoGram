@@ -8,12 +8,12 @@ import java.util.ArrayList;
 
 
 import modelo.ModelUsers;
-import config.Conector;
+import config.Connector;
 
 
 
 
-public class ModelPost extends Conector {
+public class ModelPost extends Connector {
 	ModelUsers modelUsers = new ModelUsers();
 	ModelImages modelImages = new ModelImages();
 	

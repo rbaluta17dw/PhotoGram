@@ -7,9 +7,9 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import config.Conector;
+import config.Connector;
 
-public class ModelUsers extends Conector {
+public class ModelUsers extends Connector {
 
 	public ArrayList<Users> selectAll(){
 		ArrayList<Users> users = new ArrayList<Users>();
