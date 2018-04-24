@@ -26,9 +26,9 @@
 			src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 		</span>
 
-		<form action="users/login.jsp" method="post">
-			<input type="text" name="username" placeholder="Username"> <input
-				type="password" name="pass" placeholder="Password"> <input
+		<form action="users/prueba.jsp" method="post">
+			<input type="text" name="username" placeholder="Username" value="Champinon"> <input
+				type="password" name="password" placeholder="Password" value="password"> <input
 				type="submit" value="Log In">
 			<div id="remember-container">
 				<input type="checkbox" id="checkbox-2-1" class="checkbox"

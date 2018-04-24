@@ -3,15 +3,15 @@
 <%@ page import="model.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-	String dni = request.getParameter("username").toUpperCase();
-	String password = request.getParameter("pass");
+	String username = request.getParameter("username");
+	String password = request.getParameter("password");
 
 	ModelUser userModel = new ModelUser();
-	User user = userModel.sele;
+	User user = userModel.selectUserName(username);
 
-	if (usuario != null && password.equals(usuario.getPassword())) {
-		session.setAttribute("usuario", usuario);
-		response.sendRedirect("../biblioteca.jsp");
+	if (user != null && password.equals(user.getPassword())) {
+		session.setAttribute("user", user);
+		response.sendRedirect("../feed.jsp");
 	} else {
 		response.sendRedirect("../index.jsp");
 	}
