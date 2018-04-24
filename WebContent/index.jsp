@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="modelo.*" %>
+<%@ page import="model.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	//Ver si esta loggeado
-	Object objeto = session.getAttribute("usuario");
-	if (objeto != null) {
-		response.sendRedirect("biblioteca.jsp");
+	User user = (User) session.getAttribute("usuario");
+	if (user != null) {
+		response.sendRedirect("feed.jsp");
 	}
 %>
 <html lang="en">
@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
 	<div id="login-button">
 		<img src="http://pngimg.com/uploads/instagram/instagram_PNG3.png">
 	</div>
@@ -27,10 +26,10 @@
 			src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 		</span>
 
-		<form>
-			<input type="email" name="email" placeholder="E-mail"> <input
-				type="password" name="pass" placeholder="Password"> <a
-				href="#">Log in</a>
+		<form action="users/login.jsp" method="post">
+			<input type="text" name="username" placeholder="Username"> <input
+				type="password" name="pass" placeholder="Password"> <input
+				type="submit" value="Log In">
 			<div id="remember-container">
 				<input type="checkbox" id="checkbox-2-1" class="checkbox"
 					checked="checked" /> <span id="remember">Remember me</span>
