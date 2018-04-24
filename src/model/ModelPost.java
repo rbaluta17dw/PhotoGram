@@ -9,9 +9,6 @@ import java.util.ArrayList;
 import config.Connector;
 import model.ModelUsers;
 
-
-
-
 public class ModelPost extends Connector {
 	ModelUsers modelUsers = new ModelUsers();
 	ModelImages modelImages = new ModelImages();
@@ -83,8 +80,7 @@ public class ModelPost extends Connector {
 			return post;
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}return null;
-}
-	
+		}	return null;
+	}
 	
 }

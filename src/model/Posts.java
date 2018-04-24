@@ -10,7 +10,6 @@ public class Posts {
 	private String desc;
 	private Date up_date;
 	
-	
 	public int getId_post() {
 		return id_post;
 	}
