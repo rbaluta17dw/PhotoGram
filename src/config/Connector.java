@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conector extends Config {
+public class Connector extends Config {
 	
 	protected Connection conexion;
 
 	
-	 protected Conector(){
+	 protected Connector(){
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			this.conexion = DriverManager.getConnection("jdbc:mysql://" + HOST + "/" + BBDD, USERNAME, PASSWORD);
