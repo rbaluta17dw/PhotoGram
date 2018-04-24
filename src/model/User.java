@@ -9,7 +9,7 @@ public class User {
 	private String password;
 	private String email;
 	private Date birthdate;
-	private int prf_img;
+	private Image prf_img;
 	
 	
 	public int getId_user() {
@@ -42,11 +42,12 @@ public class User {
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
 	}
-	public int getPrf_img() {
+	public Image getPrf_img() {
 		return prf_img;
 	}
-	public void setPrf_img(int prf_img) {
+	public void setPrf_img(Image prf_img) {
 		this.prf_img = prf_img;
 	}
+	
 
 }

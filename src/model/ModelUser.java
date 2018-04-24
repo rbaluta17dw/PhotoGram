@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import config.Connector;
 
 public class ModelUser extends Connector {
-
+	
+	ModelImage mImage = new ModelImage();
 	public ArrayList<User> selectAll() {
 
 		ArrayList<User> users = new ArrayList<User>();
@@ -25,7 +26,7 @@ public class ModelUser extends Connector {
 				user.setPassword(rst.getString("password"));
 				user.setEmail(rst.getString("email"));
 				user.setBirthdate(rst.getDate("birthdate"));
-				user.setPrf_img(rst.getInt("prf_img"));
+				user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 				users.add(user);
 			}
 			return users;
@@ -47,7 +48,7 @@ public class ModelUser extends Connector {
 			user.setPassword(rst.getString("password"));
 			user.setEmail(rst.getString("email"));
 			user.setBirthdate(rst.getDate("birthdate"));
-			user.setPrf_img(rst.getInt("prf_img"));
+			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 
 			return user;
 		} catch (SQLException e) {
@@ -71,7 +72,7 @@ public class ModelUser extends Connector {
 			user.setPassword(rst.getString("password"));
 			user.setEmail(rst.getString("email"));
 			user.setBirthdate(rst.getDate("birthdate"));
-			user.setPrf_img(rst.getInt("prf_img"));
+			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -103,7 +104,7 @@ public class ModelUser extends Connector {
 			pst.setString(3, user.getEmail());
 			java.sql.Date sqlDate = new java.sql.Date(user.getBirthdate().getTime());
 			pst.setDate(4, sqlDate);
-			pst.setInt(5, user.getPrf_img());
+			pst.setInt(5, user.getPrf_img().getId_img());
 			pst.setInt(6, user.getId_user());
 
 			pst.executeUpdate();
@@ -124,8 +125,8 @@ public class ModelUser extends Connector {
 			pst.setString(3, user.getPassword());
 			pst.setString(4, user.getEmail());
 			java.sql.Date sqlDate = new java.sql.Date(user.getBirthdate().getTime());
-			pst.setDate(6, sqlDate);
-			pst.setInt(7, user.getPrf_img());
+			pst.setDate(5, sqlDate);
+			pst.setInt(6, user.getPrf_img().getId_img());
 
 			pst.execute();
 		} catch (SQLException e) {
