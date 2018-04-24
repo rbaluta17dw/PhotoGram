@@ -13,14 +13,14 @@ public class ModelPost extends Connector {
 	ModelUsers modelUsers = new ModelUsers();
 	ModelImages modelImages = new ModelImages();
 	
-	public ArrayList<Posts> selectAll(){
-		ArrayList<Posts> posts = new ArrayList<Posts>();
+	public ArrayList<Post> selectAll(){
+		ArrayList<Post> posts = new ArrayList<Post>();
 		String sql = "SELECT * FROM posts";
 		try {
 			Statement stt = super.conexion.createStatement();
 			ResultSet rst = stt.executeQuery(sql);
 			while (rst.next()) {
-				Posts post = new Posts();
+				Post post = new Post();
 				post.setId_post(rst.getInt("id_post"));;
 				post.setId_img(modelImages.selectImageID(rst.getInt("id_img")));
 				post.setId_usr(modelUsers.selectUserID(rst.getInt("id_usr")));
@@ -35,7 +35,7 @@ public class ModelPost extends Connector {
 		return posts;
 	}
 	
-	public void insertPost(Posts post){
+	public void insertPost(Post post){
 		try{
 			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO posts (id_post, id_img, id_usr, descrip, up_date) values(?,?,?,?,?)");
 			pst.setInt(1, post.getId_post());
@@ -64,13 +64,13 @@ public class ModelPost extends Connector {
 
 	}
 	
-	public Posts selectPostID(int id_post) {
-		Posts post = null;
+	public Post selectPostID(int id_post) {
+		Post post = null;
 		try {
 			Statement st = conexion.createStatement();
 			ResultSet rs = st.executeQuery("SELECT * FROM posts WHERE id_post =('" + id_post + "')");
 			while(rs.next()){
-				post = new Posts();
+				post = new Post();
 				post.setId_post(rs.getInt("id_post"));
 				post.setId_img(modelImages.selectImageID(rs.getInt("id_img")));
 				post.setId_usr(modelUsers.selectUserID(rs.getInt("id_usr")));

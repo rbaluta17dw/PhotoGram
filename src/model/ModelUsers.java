@@ -11,14 +11,14 @@ import config.Connector;
 
 public class ModelUsers extends Connector {
 
-	public ArrayList<Users> selectAll(){
-		ArrayList<Users> users = new ArrayList<Users>();
+	public ArrayList<User> selectAll(){
+		ArrayList<User> users = new ArrayList<User>();
 		String sql = "SELECT * FROM USERS";
 		try {
 			Statement stt = super.conexion.createStatement();
 			ResultSet rst = stt.executeQuery(sql);
 			while (rst.next()) {
-				Users user = new Users();
+				User user = new User();
 				user.setId_user(rst.getInt("id_user"));
 				user.setUsername(rst.getString("username"));
 				user.setPassword(rst.getString("password"));
@@ -34,13 +34,13 @@ public class ModelUsers extends Connector {
 		return users;
 	}
 	
-	public Users selectUserID(int id_user){
+	public User selectUserID(int id_user){
 		try{
 			PreparedStatement pst = super.conexion.prepareStatement("SELECT * FROM users WHERE id_user = ?");
 			pst.setInt(1, id_user);
 			ResultSet rst = pst.executeQuery();
 			if(rst.next()){
-				Users user = new Users();
+				User user = new User();
 				user.setId_user(rst.getInt("id_user"));
 				user.setUsername(rst.getString("username"));
 				user.setPassword(rst.getString("password"));
@@ -72,7 +72,7 @@ public class ModelUsers extends Connector {
 
 	}
 	
-	public void updateUser(Users user){
+	public void updateUser(User user){
 		try{
 			PreparedStatement pst = super.conexion.prepareStatement("UPDATE users SET id_user=?, username=?, password=?, email=?, birthdate=?. prf_img=? where id_user=?");
 			
@@ -94,7 +94,7 @@ public class ModelUsers extends Connector {
 		
 	}
 	
-	public void insertUser(Users user){
+	public void insertUser(User user){
 		try{
 			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO users (id_user, username, password, email, birthdate, prf_img) values(?,?,?,?,?,?)");
 			pst.setInt(1, user.getId_user());

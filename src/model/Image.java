@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Blob;
 
-public class Images {
+public class Image {
 	
 	private int id_img;
 	private String name;

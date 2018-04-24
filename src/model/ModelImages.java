@@ -10,14 +10,14 @@ import config.Connector;
 
 public class ModelImages extends Connector {
 	
-	public ArrayList<Images> selectAll(){
-		ArrayList<Images> images = new ArrayList<Images>();
+	public ArrayList<Image> selectAll(){
+		ArrayList<Image> images = new ArrayList<Image>();
 		String sql = "SELECT * FROM images";
 		try {
 			Statement stt = super.conexion.createStatement();
 			ResultSet rst = stt.executeQuery(sql);
 			while (rst.next()) {
-				Images image = new Images();
+				Image image = new Image();
 				image.setId_img(rst.getInt("id_img"));
 				image.setName(rst.getString("name"));
 				image.setData(rst.getBlob("data"));
@@ -30,7 +30,7 @@ public class ModelImages extends Connector {
 		return images;
 	}
 	
-	public void insertImage(Images image){
+	public void insertImage(Image image){
 		try{
 			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO images (id_img, name, data) values(?,?,?)");
 			pst.setInt(1, image.getId_img());
@@ -40,16 +40,15 @@ public class ModelImages extends Connector {
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
-	public Images selectImageID(int id_img) {
-		Images image = null;
+	public Image selectImageID(int id_img) {
+		Image image = null;
 		try {
 			Statement st = conexion.createStatement();
 			ResultSet rs = st.executeQuery("SELECT * FROM images WHERE id_img =('" + id_img + "')");
 			while(rs.next()){
-				image = new Images();
+				image = new Image();
 				image.setId_img(rs.getInt("id_img"));
 				image.setName(rs.getString("name"));
 				image.setData(rs.getBlob("data"));

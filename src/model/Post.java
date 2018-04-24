@@ -2,11 +2,11 @@ package model;
 
 import java.util.Date;
 
-public class Posts {
+public class Post {
 	
 	private int id_post;
-	private Images id_img;
-	private Users id_usr;
+	private Image id_img;
+	private User id_usr;
 	private String desc;
 	private Date up_date;
 	
@@ -17,16 +17,16 @@ public class Posts {
 		this.id_post = id_post;
 	}
 
-	public Images getId_img() {
+	public Image getId_img() {
 		return id_img;
 	}
-	public void setId_img(Images id_img) {
+	public void setId_img(Image id_img) {
 		this.id_img = id_img;
 	}
-	public Users getId_usr() {
+	public User getId_usr() {
 		return id_usr;
 	}
-	public void setId_usr(Users id_usr) {
+	public void setId_usr(User id_usr) {
 		this.id_usr = id_usr;
 	}
 	public String getDesc() {
