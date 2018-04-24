@@ -1,4 +1,4 @@
-package modelo;
+package model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,9 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-
-import modelo.ModelUsers;
 import config.Connector;
+import model.ModelUsers;
 
 
 
