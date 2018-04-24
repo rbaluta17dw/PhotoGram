@@ -7,11 +7,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import config.Connector;
-import model.ModelUsers;
+import model.ModelUser;
 
 public class ModelPost extends Connector {
-	ModelUsers modelUsers = new ModelUsers();
-	ModelImages modelImages = new ModelImages();
+	ModelUser modelUser = new ModelUser();
+	ModelImage modelImage = new ModelImage();
 	
 	public ArrayList<Post> selectAll(){
 		ArrayList<Post> posts = new ArrayList<Post>();
@@ -22,8 +22,8 @@ public class ModelPost extends Connector {
 			while (rst.next()) {
 				Post post = new Post();
 				post.setId_post(rst.getInt("id_post"));;
-				post.setId_img(modelImages.selectImageID(rst.getInt("id_img")));
-				post.setId_usr(modelUsers.selectUserID(rst.getInt("id_usr")));
+				post.setId_img(modelImage.selectImageID(rst.getInt("id_img")));
+				post.setId_usr(modelUser.selectUserID(rst.getInt("id_usr")));
 				post.setDesc(rst.getString("descrip"));
 				post.setUp_date(rst.getDate("up_date"));
 				posts.add(post);
@@ -72,8 +72,8 @@ public class ModelPost extends Connector {
 			while(rs.next()){
 				post = new Post();
 				post.setId_post(rs.getInt("id_post"));
-				post.setId_img(modelImages.selectImageID(rs.getInt("id_img")));
-				post.setId_usr(modelUsers.selectUserID(rs.getInt("id_usr")));
+				post.setId_img(modelImage.selectImageID(rs.getInt("id_img")));
+				post.setId_usr(modelUser.selectUserID(rs.getInt("id_usr")));
 				post.setDesc(rs.getString("descrip"));
 				post.setUp_date(rs.getDate("up_date"));
 			}

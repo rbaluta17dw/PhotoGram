@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import config.Connector;
 
-public class ModelUsers extends Connector {
+public class ModelUser extends Connector {
 
 	public ArrayList<User> selectAll(){
 		ArrayList<User> users = new ArrayList<User>();

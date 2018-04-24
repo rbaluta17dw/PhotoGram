@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import config.Connector;
 
-public class ModelImages extends Connector {
+public class ModelImage extends Connector {
 	
 	public ArrayList<Image> selectAll(){
 		ArrayList<Image> images = new ArrayList<Image>();
