@@ -5,8 +5,8 @@ import java.util.Date;
 public class Posts {
 	
 	private int id_post;
-	private int id_img;
-	private int id_usr;
+	private Images id_img;
+	private Users id_usr;
 	private String desc;
 	private Date up_date;
 	
@@ -17,16 +17,17 @@ public class Posts {
 	public void setId_post(int id_post) {
 		this.id_post = id_post;
 	}
-	public int getId_img() {
+
+	public Images getId_img() {
 		return id_img;
 	}
-	public void setId_img(int id_img) {
+	public void setId_img(Images id_img) {
 		this.id_img = id_img;
 	}
-	public int getId_usr() {
+	public Users getId_usr() {
 		return id_usr;
 	}
-	public void setId_usr(int id_usr) {
+	public void setId_usr(Users id_usr) {
 		this.id_usr = id_usr;
 	}
 	public String getDesc() {

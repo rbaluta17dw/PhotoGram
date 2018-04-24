@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+
 import modelo.ModelUsers;
 import config.Conector;
 
@@ -24,9 +25,9 @@ public class ModelPost extends Conector {
 			ResultSet rst = stt.executeQuery(sql);
 			while (rst.next()) {
 				Posts post = new Posts();
-				post.setId_post(rst.getInt("id_img"));;
-				post.setId_img(rst.getInt("id_img"));
-				post.setId_usr(rst.getInt("id_usr"));
+				post.setId_post(rst.getInt("id_post"));;
+				post.setId_img(modelImages.selectImageID(rst.getInt("id_img")));
+				post.setId_usr(modelUsers.selectUserID(rst.getInt("id_usr")));
 				post.setDesc(rst.getString("descrip"));
 				post.setUp_date(rst.getDate("up_date"));
 				posts.add(post);
@@ -38,24 +39,26 @@ public class ModelPost extends Conector {
 		return posts;
 	}
 	
-	public void insertImage(Images image){
+	public void insertPost(Posts post){
 		try{
-			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO images (id_img, name, data) values(?,?,?)");
-			pst.setInt(1, image.getId_img());
-			pst.setString(2, image.getName());
-			pst.setBlob(3, image.getData());
-			pst.execute();
+			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO posts (id_post, id_img, id_usr, descrip, up_date) values(?,?,?,?,?)");
+			pst.setInt(1, post.getId_post());
+			pst.setInt(2, post.getId_img().getId_img());
+			pst.setInt(3, post.getId_usr().getId_user());
+			pst.setString(4, post.getDesc());
+			pst.setDate(5, new java.sql.Date(post.getUp_date().getTime()));
+			
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	
-	public void deleteUserID(int id_user) {
+	public void deletePostID(int id_post) {
 		PreparedStatement pst;
 		try {
-			pst = super.conexion.prepareStatement("DELETE FROM users WHERE id_user =?");
-			pst.setInt(1, id_user);
+			pst = super.conexion.prepareStatement("DELETE FROM posts WHERE id_post =?");
+			pst.setInt(1, id_post);
 
 			pst.execute();
 		} catch (SQLException e) {
@@ -65,18 +68,20 @@ public class ModelPost extends Conector {
 
 	}
 	
-	public Images selectPostID(int id_post) {
-		Images image = null;
+	public Posts selectPostID(int id_post) {
+		Posts post = null;
 		try {
 			Statement st = conexion.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM images WHERE id_img =('" + id_img + "')");
+			ResultSet rs = st.executeQuery("SELECT * FROM posts WHERE id_post =('" + id_post + "')");
 			while(rs.next()){
-				image = new Images();
-				image.setId_img(rs.getInt("id_img"));
-				image.setName(rs.getString("name"));
-				image.setData(rs.getBlob("data"));
+				post = new Posts();
+				post.setId_post(rs.getInt("id_post"));
+				post.setId_img(modelImages.selectImageID(rs.getInt("id_img")));
+				post.setId_usr(modelUsers.selectUserID(rs.getInt("id_usr")));
+				post.setDesc(rs.getString("descrip"));
+				post.setUp_date(rs.getDate("up_date"));
 			}
-			return image;
+			return post;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}return null;
