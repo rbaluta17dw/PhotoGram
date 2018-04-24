@@ -65,7 +65,7 @@ public class ModelPost extends Conector {
 
 	}
 	
-	public Images selectPostID(int id_post) {
+	public Images selectPostID(int id_img) {
 		Images image = null;
 		try {
 			Statement st = conexion.createStatement();
