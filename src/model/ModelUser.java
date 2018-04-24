@@ -10,8 +10,11 @@ import java.util.ArrayList;
 import config.Connector;
 
 public class ModelUser extends Connector {
-
+	ModelImage modelImage = new ModelImage();
 	public ArrayList<User> selectAll(){
+		
+		
+		
 		ArrayList<User> users = new ArrayList<User>();
 		String sql = "SELECT * FROM USERS";
 		try {
