@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import config.Connector;
@@ -15,7 +14,7 @@ public class ModelUser extends Connector {
 	public ArrayList<User> selectAll() {
 
 		ArrayList<User> users = new ArrayList<User>();
-		String sql = "SELECT * FROM USERS";
+		String sql = "SELECT * FROM users";
 		try {
 			Statement stt = super.conexion.createStatement();
 			ResultSet rst = stt.executeQuery(sql);
@@ -41,7 +40,8 @@ public class ModelUser extends Connector {
 			PreparedStatement pst = super.conexion.prepareStatement("SELECT * FROM users WHERE id_user = ?");
 			pst.setInt(1, id_user);
 			ResultSet rst = pst.executeQuery();
-			rst.next();
+
+			if(rst.next()){
 			User user = new User();
 			user.setId_user(rst.getInt("id_user"));
 			user.setUsername(rst.getString("username"));
@@ -50,7 +50,8 @@ public class ModelUser extends Connector {
 			user.setBirthdate(rst.getDate("birthdate"));
 			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 
-			return user;
+				return user;
+			}
 		} catch (SQLException e) {
 
 			e.printStackTrace();
@@ -61,23 +62,30 @@ public class ModelUser extends Connector {
 	}
 
 	public User selectUserName(String username) {
-		User user = new User();
 		try {
 			PreparedStatement pst = super.conexion.prepareStatement("SELECT * FROM users WHERE username = ?");
 			pst.setString(1, username);
 			ResultSet rst = pst.executeQuery();
-			rst.next();
-			user.setId_user(rst.getInt("id_user"));
-			user.setUsername(rst.getString("username"));
-			user.setPassword(rst.getString("password"));
-			user.setEmail(rst.getString("email"));
-			user.setBirthdate(rst.getDate("birthdate"));
-			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
+
+			if (rst.next()) {
+				User user = new User();
+				user.setId_user(rst.getInt("id_user"));
+				user.setUsername(rst.getString("username"));
+				user.setPassword(rst.getString("password"));
+				user.setEmail(rst.getString("email"));
+				user.setBirthdate(rst.getDate("birthdate"));
+				user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
+
+				return user;
+			}
+
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
+
 		}
-		return user;
+		return null;
+
 	}
 
 	public void deleteUserID(int id_user) {
@@ -97,7 +105,7 @@ public class ModelUser extends Connector {
 	public void updateUser(User user) {
 		try {
 			PreparedStatement pst = super.conexion.prepareStatement(
-					"UPDATE users SET id_user=?, username=?, password=?, email=?, birthdate=?. prf_img=? where id_user=?");
+					"UPDATE users SET username=?, password=?, email=?, birthdate=?. prf_img=? where id_user=?");
 
 			pst.setString(1, user.getUsername());
 			pst.setString(2, user.getPassword());
