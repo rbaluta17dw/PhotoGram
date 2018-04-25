@@ -23,10 +23,14 @@
 		</span>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<form action="users/login.jsp" method="post">
 =======
 		<form action="users/prueba.jsp" method="post">
 >>>>>>> branch 'mauricio' of https://github.com/rbaluta17dw/PhotoGram.git
+=======
+		<form action="users/prueba.jsp" method="post">
+>>>>>>> branch 'master' of https://github.com/rbaluta17dw/PhotoGram.git
 			<input type="text" name="username" placeholder="Username" value="Champinon"> <input
 				type="password" name="password" placeholder="Password" value="password"> <input
 				type="submit" value="Log In">

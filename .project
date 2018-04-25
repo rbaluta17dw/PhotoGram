@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>PhotoGram2</name>
+=======
+<<<<<<< HEAD
+	<name>PhotoGram</name>
+=======
+	<name>PhotoGram2</name>
+>>>>>>> branch 'master' of https://github.com/rbaluta17dw/PhotoGram
+>>>>>>> branch 'master' of https://github.com/rbaluta17dw/PhotoGram.git
 	<comment></comment>
 	<projects>
 	</projects>

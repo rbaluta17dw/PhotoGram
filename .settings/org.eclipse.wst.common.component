@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="PhotoGram">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+=======
+<<<<<<< HEAD
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+=======
+>>>>>>> branch 'master' of https://github.com/rbaluta17dw/PhotoGram.git
         <property name="java-output-path" value="/PhotoGram/build/classes"/>
+>>>>>>> branch 'mauricio' of https://github.com/rbaluta17dw/PhotoGram
+>>>>>>> branch 'master' of https://github.com/rbaluta17dw/PhotoGram
         <property name="context-root" value="PhotoGram"/>
+        <property name="java-output-path" value="/PhotoGram/build/classes"/>
     </wb-module>
 </project-modules>
