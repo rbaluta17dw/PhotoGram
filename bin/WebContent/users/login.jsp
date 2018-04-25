@@ -5,14 +5,13 @@
 <%
 	String username = request.getParameter("username");
 	String password = request.getParameter("password");
-
 	ModelUser userModel = new ModelUser();
 	User user = userModel.selectUserName(username);
-
 	if (user != null && password.equals(user.getPassword())) {
 		session.setAttribute("user", user);
+		response.sendRedirect("../posts/feed.jsp");
 		response.sendRedirect("../feed.jsp");
 	} else {
 		response.sendRedirect("../index.jsp");
 	}
-%>s
+%>
