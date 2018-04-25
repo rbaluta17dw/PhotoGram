@@ -13,6 +13,7 @@
 	if (user != null && password.equals(user.getPassword())) {
 		session.setAttribute("user", user);
 		response.sendRedirect("../posts/feed.jsp");
+		response.sendRedirect("../feed.jsp");
 	} else {
 		response.sendRedirect("../index.jsp");
 	}
