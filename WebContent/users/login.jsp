@@ -5,16 +5,11 @@
 <%
 	String username = request.getParameter("username");
 	String password = request.getParameter("password");
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'robert' of https://github.com/rbaluta17dw/PhotoGram
+
 	ModelUser userModel = new ModelUser();
 	User user = userModel.selectUserName(username);
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'robert' of https://github.com/rbaluta17dw/PhotoGram
 	if (user != null && password.equals(user.getPassword())) {
 		session.setAttribute("user", user);
 		response.sendRedirect("../feed.jsp");
