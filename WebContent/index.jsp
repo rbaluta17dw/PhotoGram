@@ -22,7 +22,7 @@
 			src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 		</span>
 
-		<form action="users/prueba.jsp" method="post">
+		<form action="users/login.jsp" method="post">
 			<input type="text" name="username" placeholder="Username" value="Champinon"> <input
 				type="password" name="password" placeholder="Password" value="password"> <input
 				type="submit" value="Log In">
