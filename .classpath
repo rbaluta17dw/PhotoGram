@@ -8,6 +8,14 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="D:/Robert_Baluta/Programas Eclipse/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+>>>>>>> branch 'mauricio' of https://github.com/rbaluta17dw/PhotoGram
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="D:/DESCARGAS/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar">
 		<attributes>
