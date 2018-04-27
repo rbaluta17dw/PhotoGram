@@ -13,3 +13,10 @@ $(".close-btn").click(function(){
     $("#login-button").fadeIn(800);
   });
 });
+
+/* Forgotten Password */
+$('#forgotten').click(function(){
+  $("#container").fadeOut(function(){
+    $("#forgotten-container").fadeIn();
+  });
+});
