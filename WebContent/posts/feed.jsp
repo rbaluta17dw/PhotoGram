@@ -25,6 +25,7 @@
 </head>
 
 <body>
+	<jsp:include page="../include/upload.html"></jsp:include>
 	<jsp:include page="../include/feed.html"></jsp:include>
 	<div id="feed">
 		<%
