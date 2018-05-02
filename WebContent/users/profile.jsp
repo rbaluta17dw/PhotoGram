@@ -9,6 +9,7 @@
 
 
 <link rel="stylesheet" href="../css/profile.css">
+<link rel="stylesheet" href="../css/nav.css">
 
 
 </head>
@@ -42,7 +43,8 @@
 
 
 	<div id="profile">
-	<img id="config" src="../images/config.png" height="30" width="30">
+		<a href="edit_profile.jsp"><img id="config" src="../images/config.png" height="30"
+			width="30"></a>
 		<div id="profileimg">
 			<img src="../images/pinguino.png" height="80%" width="70%"
 				id="profile_image">
@@ -50,12 +52,13 @@
 		<br>
 		<div id="profileinfo">
 			<h2>nazivince</h2>
-			<br><b>Posts: 0</b>
+			<br>
+			<b>Posts: 0</b>
 			<div>
 				<br>
 			</div>
 		</div>
-		
+
 	</div>
 </body>
 
