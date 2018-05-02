@@ -8,7 +8,7 @@
 
 
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/profile.css">
 
 
 </head>
@@ -44,7 +44,7 @@
 	<div id="profile">
 	<img id="config" src="../images/config.png" height="30" width="30">
 		<div id="profileimg">
-			<img src="../images/pinguino.png" height="200" width="200"
+			<img src="../images/pinguino.png" height="80%" width="70%"
 				id="profile_image">
 		</div>
 		<br>
