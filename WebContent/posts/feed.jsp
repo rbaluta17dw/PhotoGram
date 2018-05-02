@@ -22,11 +22,6 @@
 <meta charset="UTF-8">
 <title>Minimal Navigation bar</title>
 
-
-
-<link rel="stylesheet" href="../css/feed.css">
-
-
 </head>
 
 <body>
