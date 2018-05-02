@@ -50,7 +50,7 @@
 		<br>
 		<div id="profileinfo">
 			<h2>nazivince</h2>
-			<br>Posts: 0
+			<br><b>Posts: 0</b>
 			<div>
 				<br>
 			</div>

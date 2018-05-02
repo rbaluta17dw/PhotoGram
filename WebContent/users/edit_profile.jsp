@@ -8,7 +8,7 @@
 
 
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/profile.css">
 
 
 </head>
@@ -44,13 +44,19 @@
 	<div id="profile">
 	<div id="config"><input type="submit" name="Guardar" value="Guardar" style: width="300px" id="save_conf"></div>
 		<div id="profileimg">
-			<img src="../images/pinguino.png" height="200" width="200"
+			<img src="../images/pinguino.png" height="80%" width="70%"
 				id="profile_image">
+				<br>
+				<input type="button" value="Seleccionar archivo">
 		</div>
 		<br>
 		<div id="profileinfo">
 			<input type="text" name="username" value="nazivince">
-			<br>Posts: 0
+			<br><br>
+			<input type="password" name="password" placeholder="nueva contraseña">
+			<input type="email" name="email" placeholder="nuevo email">
+			<input type="date" name="fecha_nacimiento" placeholder="nueva fecha de nacimiento">
+			<br><br><b>Posts: 0</b>
 			<div>
 				<br>
 			</div>
