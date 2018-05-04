@@ -43,8 +43,8 @@
 
 
 	<div id="profile">
-		<a href="edit_profile.jsp"><img id="config" src="../images/config.png" height="30"
-			width="30"></a>
+		<a href="edit_profile.jsp"><img id="config" src="http://iconshow.me/media/images/ui/ios7-icons/png/256/gear-b.png" height="100"
+			width="100"></a>
 		<div id="profileimg">
 			<img src="../images/pinguino.png" height="80%" width="70%"
 				id="profile_image">

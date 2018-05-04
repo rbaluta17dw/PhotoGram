@@ -10,8 +10,8 @@
 
 <link rel="stylesheet" href="../css/profile.css">
 <link rel="stylesheet" href="../css/nav.css">
-<link rel="stylesheet" href="../css/botonguardar.css">
-<link rel="stylesheet" href="../scss/botonguardar.scss">
+<link rel="stylesheet" href="../css/boton.css">
+<link rel="stylesheet" href="../scss/boton.scss">
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 		<script src="../js/jquery.validate.min.js"></script>
@@ -116,7 +116,8 @@
 			<input type="email" name="email" placeholder="nuevo email"><br>
 			<input type="date" name="birthdate" placeholder="nueva fecha de nacimiento"><br>
 			<br><br><b>Posts: 0</b>
-			<div class="wrapper"><a href="profile.jsp" class="fancy-button pop-onhover bg-gradient4"><span>Guardar</span></a></div>
+			<div class="wrapper"><a href="profile.jsp" class="fancy-button pop-onhover bg-gradient4"><span>Guardar</span></a>
+			<div class="wrapper"><a href="#" class="fancy-button pop-onhover bg-gradient4"><span>Eliminar cuenta</span></a></div>
 			</form>
 			<div>
 				<br>
