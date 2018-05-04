@@ -20,7 +20,7 @@ public class ModelImage extends Connector {
 				Image image = new Image();
 				image.setId_img(rst.getInt("id_img"));
 				image.setName(rst.getString("name"));
-				image.setUrl(rst.getString("data"));
+				image.setUrl(rst.getString("url"));
 				images.add(image);
 			}
 			return images;
@@ -33,7 +33,7 @@ public class ModelImage extends Connector {
 	public void insertImage(Image image) {
 		try {
 			PreparedStatement pst = super.conexion
-					.prepareStatement("INSERT INTO images (id_img, name, data) values(?,?,?)");
+					.prepareStatement("INSERT INTO images (id_img, name, url) values(?,?,?)");
 			pst.setInt(1, image.getId_img());
 			pst.setString(2, image.getName());
 			pst.setString(3, image.getUrl());
@@ -52,7 +52,7 @@ public class ModelImage extends Connector {
 				image = new Image();
 				image.setId_img(rs.getInt("id_img"));
 				image.setName(rs.getString("name"));
-				image.setUrl(rs.getString("data"));
+				image.setUrl(rs.getString("url"));
 			}
 			return image;
 		} catch (SQLException e) {
