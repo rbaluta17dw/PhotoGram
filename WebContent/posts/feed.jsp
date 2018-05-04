@@ -38,7 +38,7 @@
 			<div class="user">
 				<img class="profile" alt="<%=post.getId_usr().getPrf_img()%>"
 					src="../images/<%=post.getId_usr().getPrf_img().getUrl()%>">
-				<%=post.getId_usr().getUsername()%>
+				<a href="../users/profile.jsp?id=<%=post.getId_usr().getId_user()%>"><%=post.getId_usr().getUsername()%></a>
 			</div>
 			<img class="image" alt="<%=post.getId_img().getName()%>"
 				src="../images/<%=post.getId_img().getUrl()%>">

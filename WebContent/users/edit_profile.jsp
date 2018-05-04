@@ -9,6 +9,65 @@
 
 
 <link rel="stylesheet" href="../css/profile.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/boton.css">
+<link rel="stylesheet" href="../scss/boton.scss">
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/jquery.validate.min.js"></script>
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+    			$("#ficha").validate({
+    				rules: {
+    					username: {
+    						maxlength: 20
+    					},
+    					
+    					password: {
+    						maxlength: 20
+    					},
+    					
+    					email: {
+    						email: true,
+    						maxlength: 40
+						},
+
+    					birthdate: {
+    						date: true
+    					}
+
+					}, //fin de las reglas, rules
+
+					messages: {
+						username: {
+    						maxlength: "Máximo 20 caracteres"
+    					},	
+
+    					password: {
+    						maxlength: "Máximo 20 caracteres"
+    					},	
+
+    					email: {
+    						email: "Introduce un email válido",
+    						maxlength: "Máximo 40 caracteres"
+    					},
+
+    					birthdate: {
+    						date: "Introduce una fecha válida"
+						}
+					},  //fin de los mensajes
+
+				errorPlacement: function(error, element) { 
+			       if ( element.is(":radio") || element.is(":checkbox")) {
+			          error.appendTo( element.parent()); 
+			        } else {
+			          error.insertAfter(element);
+			        } 
+			    } 
+				});  //fin validate
+			});	//fin ready
+			
+		</script>
 
 
 </head>
@@ -42,7 +101,6 @@
 
 
 	<div id="profile">
-	<div id="config"><input type="submit" name="Guardar" value="Guardar" style: width="300px" id="save_conf"></div>
 		<div id="profileimg">
 			<img src="../images/pinguino.png" height="80%" width="70%"
 				id="profile_image">
@@ -51,12 +109,16 @@
 		</div>
 		<br>
 		<div id="profileinfo">
+		<form action="" method="post" name="ficha" id="ficha">
 			<input type="text" name="username" value="nazivince">
 			<br><br>
-			<input type="password" name="password" placeholder="nueva contraseña">
-			<input type="email" name="email" placeholder="nuevo email">
-			<input type="date" name="fecha_nacimiento" placeholder="nueva fecha de nacimiento">
+			<input type="password" name="password" placeholder="nueva contraseña"><br>
+			<input type="email" name="email" placeholder="nuevo email"><br>
+			<input type="date" name="birthdate" placeholder="nueva fecha de nacimiento"><br>
 			<br><br><b>Posts: 0</b>
+			<div class="wrapper"><a href="profile.jsp" class="fancy-button pop-onhover bg-gradient4"><span>Guardar</span></a>
+			<div class="wrapper"><a href="#" class="fancy-button pop-onhover bg-gradient4"><span>Eliminar cuenta</span></a></div>
+			</form>
 			<div>
 				<br>
 			</div>
