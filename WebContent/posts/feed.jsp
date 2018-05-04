@@ -26,7 +26,7 @@
 
 <body>
 	<jsp:include page="../include/upload.html"></jsp:include>
-	<jsp:include page="../include/feed.html"></jsp:include>
+	<jsp:include page="../include/nav.html"></jsp:include>
 	<div id="feed">
 		<%
 			Iterator<Post> i = posts.iterator();
