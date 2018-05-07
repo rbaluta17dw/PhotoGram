@@ -41,10 +41,10 @@ public class ModelPost extends Connector {
 		try {
 			PreparedStatement pst = super.conexion
 					.prepareStatement("INSERT INTO posts (id_img, id_usr, descrip, up_date) values(?,?,?,?)");
-			pst.setInt(2, post.getId_img().getId_img());
-			pst.setInt(3, post.getId_usr().getId_user());
-			pst.setString(4, post.getDesc());
-			pst.setDate(5, dateToSql(post.getUp_date()));
+			pst.setInt(1, post.getId_img().getId_img());
+			pst.setInt(2, post.getId_usr().getId_user());
+			pst.setString(3, post.getDesc());
+			pst.setDate(4, dateToSql(post.getUp_date()));
 
 		} catch (SQLException e) {
 			e.printStackTrace();
