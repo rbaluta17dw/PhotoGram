@@ -61,6 +61,24 @@ public class ModelImage extends Connector {
 		return null;
 	}
 
+	public Image selectImageName(String name) {
+		Image image = null;
+		try {
+			Statement st = conexion.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * FROM images WHERE name =('" + name + "')");
+			while (rs.next()) {
+				image = new Image();
+				image.setId_img(rs.getInt("id_img"));
+				image.setName(rs.getString("name"));
+				image.setUrl(rs.getString("url"));
+			}
+			return image;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	public void deleteImageID(int id_img) {
 		PreparedStatement pst;
 		try {
