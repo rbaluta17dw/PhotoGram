@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="../css/boton.css">
 <link rel="stylesheet" href="../scss/boton.scss">
 
-<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="../js/jquery.validate.min.js"></script>
     	<script type="text/javascript">
     		$(document).ready(function(){

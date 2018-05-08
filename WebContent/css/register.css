@@ -14,14 +14,16 @@ html {
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	width: 460px;
-	height: 400px;
+	width: 600px;
+	height: 750px;
 	border-radius: 5px;
 	background: rgba(3, 3, 3, 0.25);
 	box-shadow: 1px 1px 50px #000;
 }
-
 /* Heading */
+p{
+	
+}
 h1 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	position: relative;
@@ -31,7 +33,15 @@ h1 {
 	color: #ddd;
 	text-shadow: 3px 3px 10px #000;
 }
-
+h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+	position: relative;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 20px;
+	color: #ddd;
+	text-shadow: 3px 3px 10px #000;
+}
 /* Inputs */
 a, input {
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -68,15 +78,15 @@ input:focus {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-	color: red;
+	color: #ddd;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-	color: red;
+	color: #ddd;
 }
 
 :-ms-input-placeholder {
-	color: #333;
+	color: #ddd;
 }
 
 /* Link */
@@ -89,15 +99,6 @@ a {
 
 a:hover {
 	opacity: 0.7;
-}
-
-#remember {
-	position: absolute;
-	font-size: 13px;
-	font-family: 'Hind', sans-serif;
-	color: rgba(255, 255, 255, .5);
-	top: 7px;
-	left: 20px;
 }
 
 .orange-btn {
