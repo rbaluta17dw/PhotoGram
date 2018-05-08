@@ -23,6 +23,7 @@
 
 <body>
 	<jsp:include page="../include/nav.html"></jsp:include>
+	<jsp:include page="../include/upload.html"></jsp:include>
 
 	<div id="profile">
 		<img id="config"
