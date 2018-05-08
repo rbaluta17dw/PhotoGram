@@ -7,7 +7,6 @@ $(document).ready(function() {
 	});
 	$("#plus").click(function() {
 		$('#imgupload').trigger('click');
-		$('#done').replaceWith("<input type='text' placeholder='descripcion' name='desc'/>" +
-				"<input type='submit' value='Subir fichero' />");
+		$('#done').replaceWith("<input type='submit' value='Subir fichero' />");
 	});
 });

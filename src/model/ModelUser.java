@@ -9,10 +9,9 @@ import java.util.ArrayList;
 import config.Connector;
 
 public class ModelUser extends Connector {
-	
-
 
 	ModelImage mImage = new ModelImage();
+
 	public ArrayList<User> selectAll() {
 
 		ArrayList<User> users = new ArrayList<User>();
@@ -43,14 +42,14 @@ public class ModelUser extends Connector {
 			pst.setInt(1, id_user);
 			ResultSet rst = pst.executeQuery();
 
-			if(rst.next()){
-			User user = new User();
-			user.setId_user(rst.getInt("id_user"));
-			user.setUsername(rst.getString("username"));
-			user.setPassword(rst.getString("password"));
-			user.setEmail(rst.getString("email"));
-			user.setBirthdate(rst.getDate("birthdate"));
-			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
+			if (rst.next()) {
+				User user = new User();
+				user.setId_user(rst.getInt("id_user"));
+				user.setUsername(rst.getString("username"));
+				user.setPassword(rst.getString("password"));
+				user.setEmail(rst.getString("email"));
+				user.setBirthdate(rst.getDate("birthdate"));
+				user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 
 				return user;
 			}

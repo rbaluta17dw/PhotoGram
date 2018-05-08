@@ -5,7 +5,7 @@ import java.util.Date;
 public class Post {
 	
 	private int id_post;
-	private Image id_img;
+	private Image img;
 	private User id_usr;
 	private String desc;
 	private Date up_date;
@@ -17,11 +17,11 @@ public class Post {
 		this.id_post = id_post;
 	}
 
-	public Image getId_img() {
-		return id_img;
+	public Image getImg() {
+		return img;
 	}
-	public void setId_img(Image id_img) {
-		this.id_img = id_img;
+	public void setImg(Image id_img) {
+		this.img = id_img;
 	}
 	public User getId_usr() {
 		return id_usr;
@@ -41,5 +41,11 @@ public class Post {
 	public void setUp_date(Date up_date) {
 		this.up_date = up_date;
 	}
+	@Override
+	public String toString() {
+		return "Post [id_post=" + id_post + ", img=" + img.getName() + ", id_usr=" + id_usr.getUsername() + ", desc=" + desc + ", up_date="
+				+ up_date + "]";
+	}
 
+	
 }

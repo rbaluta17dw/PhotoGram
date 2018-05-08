@@ -3,21 +3,24 @@
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="model.*"%>
+<%@ page import="java.text.*"%>
 <%@ page import="org.apache.commons.fileupload.*"%>
 <%@ page import="org.apache.commons.fileupload.disk.*"%>
 <%@ page import="org.apache.commons.fileupload.servlet.*"%>
 
 <%
-	Calendar cal = Calendar.getInstance();
-	Date uploadDate = new Date();
-	uploadDate = cal.getTime();
-	String desc = request.getParameter("desc");
 	ModelImage modelImage = new ModelImage();
 	ModelPost modelPost = new ModelPost();
+
+	String desc = "reeeeeeeeeeee";
+
+	//creaa una imagen, un usuario y una publicacion
 	User user = (User) session.getAttribute("user");
 	Post post = new Post();
-	post.setId_usr(user);
 	Image image = new Image();
+
+	//out.println(user.getId_user());
+
 	final String RUTA = "C:\\Users\\ik012982i9\\git\\PhotoGram\\WebContent\\images";
 	Iterator it;
 	List lista;
@@ -37,18 +40,28 @@
 			if (item.isFormField())
 				out.println(item.getFieldName() + "<br>");
 			else {
+
 				String name = user.getId_user() + item.getName();
+
+				archivo = new File(item.getName());
+				item.write(new File(destino, user.getId_user() + item.getName()));
+
 				image.setName(name);
 				image.setUrl(name);
 				modelImage.insertImage(image);
-				post.setId_img(modelImage.selectImageName(name));
+
+				post.setId_usr(user);
 				post.setDesc(desc);
-				post.setUp_date(uploadDate);
+				post.setUp_date(new Date());
+				post.setImg(modelImage.selectImageName(name));
 				modelPost.insertPost(post);
-				archivo = new File(item.getName());
-				item.write(new File(destino, user.getId_user() + item.getName()));
+
+				//out.println(modelImage.selectImageName(name));
+
 				response.sendRedirect("feed.jsp");
+				//out.println(post);
 			}
+
 		}
 	}
 %>

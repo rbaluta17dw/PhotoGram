@@ -41,8 +41,8 @@
 				<a
 					href="../users/profile.jsp?username=<%=post.getId_usr().getUsername()%>"><%=post.getId_usr().getUsername()%></a>
 			</div>
-			<img class="image" alt="<%=post.getId_img().getName()%>"
-				src="../images/<%=post.getId_img().getUrl()%>">
+			<img class="image" alt="<%=post.getImg().getName()%>"
+				src="../images/<%=post.getImg().getUrl()%>">
 			<div class="info">
 				<%=post.getDesc()%><br>
 				<%=post.getUp_date()%>

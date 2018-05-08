@@ -24,7 +24,7 @@ public class ModelPost extends Connector {
 				Post post = new Post();
 				post.setId_post(rst.getInt("id_post"));
 				;
-				post.setId_img(modelImage.selectImageID(rst.getInt("id_img")));
+				post.setImg(modelImage.selectImageID(rst.getInt("id_img")));
 				post.setId_usr(modelUser.selectUserID(rst.getInt("id_usr")));
 				post.setDesc(rst.getString("descrip"));
 				post.setUp_date(rst.getDate("up_date"));
@@ -40,16 +40,15 @@ public class ModelPost extends Connector {
 	public void insertPost(Post post) {
 		try {
 			PreparedStatement pst = super.conexion
-					.prepareStatement("INSERT INTO posts (id_img, id_usr, descrip, up_date) values(?,?,?,?)");
-			pst.setInt(1, post.getId_img().getId_img());
-			pst.setInt(2, post.getId_usr().getId_user());
-			pst.setString(3, post.getDesc());
-			pst.setDate(4, dateToSql(post.getUp_date()));
-
+					.prepareStatement("INSERT INTO posts (id_post, id_img, id_usr, descrip) values(?,?,?,?)");
+			pst.setInt(1, post.getId_post());
+			pst.setInt(2, post.getImg().getId_img());
+			pst.setInt(3, post.getId_usr().getId_user());
+			pst.setString(4, post.getDesc());
+			pst.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public void deletePostID(int id_post) {
@@ -74,7 +73,7 @@ public class ModelPost extends Connector {
 			while (rs.next()) {
 				post = new Post();
 				post.setId_post(rs.getInt("id_post"));
-				post.setId_img(modelImage.selectImageID(rs.getInt("id_img")));
+				post.setImg(modelImage.selectImageID(rs.getInt("id_img")));
 				post.setId_usr(modelUser.selectUserID(rs.getInt("id_usr")));
 				post.setDesc(rs.getString("descrip"));
 				post.setUp_date(rs.getDate("up_date"));
