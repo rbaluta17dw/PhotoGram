@@ -7,29 +7,29 @@
 <meta charset="UTF-8">
 <title>Minimal Navigation bar</title>
 <%
+	ModelUser modelUser = new ModelUser();
 	User user = (User) session.getAttribute("user");
 	if (user == null) {
 		response.sendRedirect("../index.jsp");
+	} else if (!user.getUsername().equals(request.getParameter("username"))
+			&& request.getParameter("username") != null) {
+		String username = request.getParameter("username");
+		user = modelUser.selectUserName(username);
 	}
-
-	ModelUser modelUser = new ModelUser();
 %>
 <link rel="stylesheet" href="../css/profile.css">
-<link rel="stylesheet" href="../css/nav.css">
-
 
 </head>
 
 <body>
 	<jsp:include page="../include/nav.html"></jsp:include>
-	
+
 	<div id="profile">
 		<img id="config"
 			src="http://iconshow.me/media/images/ui/ios7-icons/png/256/gear-b.png"
 			height="7%" width="7%">
-		<div id="profileimg">
-			<img src="../images/<%=user.getPrf_img().getUrl()%>" height="80%"
-				width="70%" id="profile_image">
+		<div>
+			<img src="../images/<%=user.getPrf_img().getUrl()%>" id="profileimg">
 		</div>
 		<br>
 		<div id="profileinfo">
