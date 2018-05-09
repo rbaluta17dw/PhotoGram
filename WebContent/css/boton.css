@@ -1,22 +1,4 @@
-/* Mixins */
-/* bg shortcodes */
-.bg-gradient1 span,
-.bg-gradient1:before {
-  background: #fa7e29;
-  background: linear-gradient(180deg, #fa7e29 0%, #F6682F 80%, #F6682F 100%);
-}
 
-.bg-gradient2 span,
-.bg-gradient2:before {
-  background: #39C2C9;
-  background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%);
-}
-
-.pop-onhover.bg-gradient3 span,
-.pop-onhover.bg-gradient3:before {
-  background: #B9AEF0;
-  background: linear-gradient(180deg, #B9AEF0 0%, #ADA1EB 80%, #ADA1EB 100%);
-}
 
 .bg-gradient4 span {
   background: #F6682F;
@@ -57,12 +39,6 @@ a:hover, a:focus, a:active {
 }
 .fancy-button.bg-gradient1 {
   text-shadow: 0px 0px 1px #BF4C28;
-}
-.fancy-button.bg-gradient2 {
-  text-shadow: 0px 0px 1px #227270;
-}
-.fancy-button.bg-gradient3 {
-  text-shadow: 0 0 1px #546082;
 }
 .fancy-button:before {
   content: '';
@@ -146,11 +122,6 @@ a:hover, a:focus, a:active {
   -webkit-filter: blur(5px) brightness(0.85);
           filter: blur(5px) brightness(0.85);
   transition: all 0.2s ease-out;
-}
-
-.pop-onhover.bg-gradient3 span:hover {
-  background: #B9AEF0;
-  background: linear-gradient(120deg, #B9AEF0 0%, #ADA1EB 80%, #ADA1EB 100%);
 }
 
 .bg-gradient4:before {

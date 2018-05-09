@@ -9,12 +9,14 @@
 <%
 	ModelUser modelUser = new ModelUser();
 	User user = (User) session.getAttribute("user");
+	boolean usrConf = true;
 	if (user == null) {
 		response.sendRedirect("../index.jsp");
 	} else if (!user.getUsername().equals(request.getParameter("username"))
 			&& request.getParameter("username") != null) {
 		String username = request.getParameter("username");
 		user = modelUser.selectUserName(username);
+		usrConf = false;
 	}
 %>
 <link rel="stylesheet" href="../css/profile.css">
@@ -26,15 +28,26 @@
 	<jsp:include page="../include/upload.html"></jsp:include>
 
 	<div id="profile">
-		<img id="config"
+		<%
+			if (usrConf) {
+		%><img id="config"
 			src="http://iconshow.me/media/images/ui/ios7-icons/png/256/gear-b.png"
 			height="7%" width="7%">
+		<%
+			}
+		%>
+
 		<div>
-			<img src="../images/<%=user.getPrf_img().getUrl()%>" id="profileimg">
+			<div class="prfl">
+				<img src="../images/<%=user.getPrf_img().getUrl()%>" id="profileimg">
+			</div>
 		</div>
 		<br>
 		<div id="profileinfo">
 			<h2><%=user.getUsername()%></h2>
+			<div class="hidden">
+				fsdfsdfsd
+			</div>
 			<br> <b>Posts: 0</b>
 			<div>
 				<br>
@@ -43,5 +56,5 @@
 
 	</div>
 </body>
-
+<script src="../js/profile.js"></script>
 </html>
