@@ -88,7 +88,7 @@
 		</script>
 </head>
 <body>
-<div id="registro">
+<div id="container">
 <form action="" method="post" name="ficha" id="ficha">
 <h1>FORMULARIO DE REGISTRO</h1>
 		<div>
