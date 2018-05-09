@@ -7,9 +7,10 @@
 }
 
 #profileimg {
-	width: 28%;
-	height: 30%;
+	width: 150px;
+	height: 150px;
 	float: left;
+	border-radius: 50%;
 }
 
 #profileinfo {
@@ -19,8 +20,8 @@
 }
 
 #config {
-	width: 60px;
-	height: 60px;
+	width: 7%;
+	height: 7%;
 	float: right;
 	opacity: 0.8;
 	transition: all .2s ease-in-out;
@@ -29,10 +30,6 @@
 #config:hover {
 	transform: scale(1.3);
 	opacity: 1;
-}
-
-#profile_image {
-	border-radius: 100px;
 }
 
 #save_conf {

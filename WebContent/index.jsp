@@ -3,7 +3,7 @@
 <%@ page import="model.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-
+	
 %>
 <html lang="en">
 <head>
@@ -23,9 +23,11 @@
 		</span>
 
 		<form action="users/login.jsp" method="post">
-			<input type="text" name="username" placeholder="Username" value="Champinon"> <input
-				type="password" name="password" placeholder="Password" value="password"> <input
-				type="submit" value="Log In">
+			<input type="text" name="username" placeholder="Username"
+				value="Champinon"> <input type="password" name="password"
+				placeholder="Password" value="password"> <input
+				type="submit" value="Log In"> <input type="button"
+				name="register" value="registrar" onclick="window.location='users/register.jsp';">
 			<div id="remember-container">
 				<input type="checkbox" id="checkbox-2-1" class="checkbox"
 					checked="checked" /> <span id="remember">Remember me</span>

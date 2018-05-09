@@ -5,14 +5,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
 import config.Connector;
 
 public class ModelUser extends Connector {
-	
-
 
 	ModelImage mImage = new ModelImage();
+
 	public ArrayList<User> selectAll() {
 
 		ArrayList<User> users = new ArrayList<User>();
@@ -43,14 +43,14 @@ public class ModelUser extends Connector {
 			pst.setInt(1, id_user);
 			ResultSet rst = pst.executeQuery();
 
-			if(rst.next()){
-			User user = new User();
-			user.setId_user(rst.getInt("id_user"));
-			user.setUsername(rst.getString("username"));
-			user.setPassword(rst.getString("password"));
-			user.setEmail(rst.getString("email"));
-			user.setBirthdate(rst.getDate("birthdate"));
-			user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
+			if (rst.next()) {
+				User user = new User();
+				user.setId_user(rst.getInt("id_user"));
+				user.setUsername(rst.getString("username"));
+				user.setPassword(rst.getString("password"));
+				user.setEmail(rst.getString("email"));
+				user.setBirthdate(rst.getDate("birthdate"));
+				user.setPrf_img(mImage.selectImageID(rst.getInt("prf_img")));
 
 				return user;
 			}
@@ -128,19 +128,22 @@ public class ModelUser extends Connector {
 
 	public void insertUser(User user) {
 		try {
-			PreparedStatement pst = super.conexion.prepareStatement(
-					"INSERT INTO users (id_user, username, password, email, birthdate, prf_img) values(?,?,?,?,?,?)");
-			pst.setInt(1, user.getId_user());
-			pst.setString(2, user.getUsername());
-			pst.setString(3, user.getPassword());
-			pst.setString(4, user.getEmail());
-			java.sql.Date sqlDate = new java.sql.Date(user.getBirthdate().getTime());
-			pst.setDate(5, sqlDate);
-			pst.setInt(6, user.getPrf_img().getId_img());
+			PreparedStatement pst = super.conexion
+					.prepareStatement("INSERT INTO users (username, password, email, birthdate) values(?,?,?,?)");
+			pst.setString(1, user.getUsername());
+			pst.setString(2, user.getPassword());
+			pst.setString(3, user.getEmail());
+			pst.setDate(4, dateToSql(user.getBirthdate()));
 
 			pst.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public java.sql.Date dateToSql(Date fecha) {
+		java.sql.Date sqlDate = new java.sql.Date(fecha.getTime());
+
+		return sqlDate;
 	}
 }

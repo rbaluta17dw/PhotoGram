@@ -6,7 +6,6 @@ html {
 	overflow: hidden;
 }
 
-
 img {
 	display: block;
 	margin: auto;
@@ -49,7 +48,7 @@ img {
 	bottom: 0;
 	margin: auto;
 	width: 260px;
-	height: 260px;
+	height: 360px;
 	border-radius: 5px;
 	background: rgba(3, 3, 3, 0.25);
 	box-shadow: 1px 1px 50px #000;

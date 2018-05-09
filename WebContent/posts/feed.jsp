@@ -21,11 +21,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Minimal Navigation bar</title>
-
+<script src="../js/feed.js"></script>
 </head>
 
 <body>
-	<jsp:include page="../include/feed.html"></jsp:include>
+	<jsp:include page="../include/nav.html"></jsp:include>
+	<jsp:include page="../include/upload.html"></jsp:include>
 	<div id="feed">
 		<%
 			Iterator<Post> i = posts.iterator();
@@ -36,11 +37,12 @@
 		<div class="post">
 			<div class="user">
 				<img class="profile" alt="<%=post.getId_usr().getPrf_img()%>"
-					src="<%=post.getId_usr().getPrf_img()%>">
-				<%=post.getId_usr().getUsername()%>
+					src="../images/<%=post.getId_usr().getPrf_img().getUrl()%>">
+				<a
+					href="../users/profile.jsp?username=<%=post.getId_usr().getUsername()%>"><%=post.getId_usr().getUsername()%></a>
 			</div>
-			<img class="image" alt="<%=post.getId_img().getName()%>"
-				src="<%=post.getId_img().getData()%>">
+			<img class="image" alt="<%=post.getImg().getName()%>"
+				src="../images/<%=post.getImg().getUrl()%>">
 			<div class="info">
 				<%=post.getDesc()%><br>
 				<%=post.getUp_date()%>
