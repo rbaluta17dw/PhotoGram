@@ -1,17 +1,19 @@
 /* main.css */
-
-.usrconf{
+.usrconf {
 	display: all;
 	transition: all .2s ease-in-out;
 }
-.usrconf:hover{
+
+.usrconf:hover {
 	image: url("https://png.icons8.com/ios/1600/add.png");
 	opacity: 0.3;
 	cursor: pointer;
 }
-.hidden{
+
+.hidden {
 	display: none;
 }
+
 #profile {
 	width: 40%;
 	height: auto;
@@ -19,6 +21,20 @@
 }
 
 #profileimg {
+	width: 150px;
+	height: 150px;
+	float: left;
+	border-radius: 50%;
+}
+
+#update {
+	width: 150px;
+	height: 150px;
+	float: left;
+	border-radius: 50%;
+}
+
+#submit {
 	width: 150px;
 	height: 150px;
 	float: left;
@@ -43,7 +59,6 @@
 #config:hover {
 	transform: scale(1.3);
 	opacity: 1;
-	
 }
 
 #save_conf {
@@ -51,6 +66,18 @@
 	height: 80px;
 	font-size: 18px;
 	border-radius: 30px;
+}
+
+.boton {
+	color: black;
+	opacity: 0.7;
+	background-color:;
+	background: #FC3D7C;
+}
+
+.boton:hover {
+	background: #FC3D7C;
+	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
 }
 
 input {

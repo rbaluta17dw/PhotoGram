@@ -139,6 +139,22 @@ public class ModelUser extends Connector {
 		}
 	}
 
+	public void updateImgUser(User user) {
+		try {
+			PreparedStatement pst = super.conexion.prepareStatement("UPDATE users SET prf_img where id_user=?");
+
+			pst.setInt(1, user.getPrf_img().getId_img());
+			pst.setInt(2, user.getId_user());
+
+			pst.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
 	public java.sql.Date dateToSql(Date fecha) {
 		java.sql.Date sqlDate = new java.sql.Date(fecha.getTime());
 

@@ -24,8 +24,8 @@
 
 		<form action="users/login.jsp" method="post">
 			<input type="text" name="username" placeholder="Username"
-				value="Champinon"> <input type="password" name="password"
-				placeholder="Password" value="password"> <input
+				value="Championcito"> <input type="password" name="password"
+				placeholder="Password" value="123456789"> <input
 				type="submit" value="Log In"> <input type="button"
 				name="register" value="registrar" onclick="window.location='users/register.jsp';">
 			<div id="remember-container">
