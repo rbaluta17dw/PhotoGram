@@ -3,7 +3,12 @@ $(document).ready(function() {
 		$(".prfl").toggleClass("usrconf");
 		$(".hidden").toggle();
 	});
-
+	$("#delete").click(function() {
+		window.location.replace("deleteUser.jsp");
+	});
+	$(".usrconf").click(function(){
+		$('#imgupload').trigger('click');
+	});
 	$("#ficha").validate({
 		rules : {
 			username : {
@@ -15,9 +20,6 @@ $(document).ready(function() {
 			email : {
 				email : true,
 				maxlength : 40
-			},
-			birthdate : {
-				date : true
 			}
 		}, // fin de las reglas, rules
 		messages : {
@@ -30,9 +32,6 @@ $(document).ready(function() {
 			email : {
 				email : "Introduce un email válido",
 				maxlength : "Máximo 40 caracteres"
-			},
-			birthdate : {
-				date : "Introduce una fecha válida"
 			}
 		}, // fin de los mensajes
 		errorPlacement : function(error, element) {

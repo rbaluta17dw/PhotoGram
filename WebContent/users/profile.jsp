@@ -39,22 +39,34 @@
 
 		<div>
 			<div class="prfl">
+				<input name="file" type="file" id="imgupload" style="display: none" />
 				<img src="../images/<%=user.getPrf_img().getUrl()%>" id="profileimg">
 			</div>
 		</div>
 		<br>
-		<div id="profileinfo">
-			<h2><%=user.getUsername()%></h2>
-			<div class="hidden">
-				fsdfsdfsd
+		<form action="updateProfile.jsp" method="post" id="ficha" name="ficha">
+			<div id="profileinfo">
+				<h2><%=user.getUsername()%></h2>
+				<div class="hidden">
+					<input type="text" name="username" placeholder="Username"><br>
+					<input type="password" name="password"
+						placeholder="Actual Password"><br> <input
+						type="password" name="repassword" placeholder="Nueva Password"><br>
+					<input type="email" name="email" placeholder="new email"><br>
+					<input type="date" name="birthdate"
+						placeholder="Fecha de nacimiento"><br> <input
+						type="submit" value="guardar" class="boton"> <input
+						type="button" id="delete" value="eliminar" class="boton">
+				</div>
+				<br> <b>Posts: 0</b>
+				<div>
+					<br>
+				</div>
 			</div>
-			<br> <b>Posts: 0</b>
-			<div>
-				<br>
-			</div>
-		</div>
+		</form>
 
 	</div>
+
 </body>
 <script src="../js/profile.js"></script>
 </html>

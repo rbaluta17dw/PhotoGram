@@ -8,87 +8,14 @@
 <title>Register</title>
 <link rel="stylesheet" type="text/css" href="../css/register.css">
 <jsp:include page="../include/index.html"></jsp:include>
+<script src="../js/register.js" charset="UTF-8"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script src="js/register.js">
-<script type="text/javascript">
-	//Validacion de formulario con Jquery
-
-	$(document).ready(function() {
-		$("#ficha").validate({
-			rules : {
-				username : {
-					maxlength : 20,
-					required : true
-				},
-
-				password : {
-					maxlength : 20,
-					minlength : 8,
-					required : true
-				},
-
-				repassword : {
-					maxlength : 20,
-					required : true,
-					equalTo : "#password"
-				},
-
-				email : {
-					email : true,
-					maxlength : 40,
-					required : true
-				},
-
-				birthdate : {
-					date : true,
-					required : true
-				}
-
-			}, //fin de las reglas, rules
-
-			messages : {
-				username : {
-					maxlength : "Máximo 20 caracteres",
-					required : "Campo obligatorio"
-				},
-
-				password : {
-					maxlength : "Máximo 20 caracteres",
-					minlength : "Mínimo de 8 carácteres",
-					required : "Campo obligatorio"
-				},
-
-				repassword : {
-					maxlength : "Máximo 20 caracteres",
-					required : "Campo obligatorio",
-					equalTo : "Las contraseñas no coinciden"
-				},
-
-				email : {
-					email : "Introduce un email válido",
-					maxlength : "Máximo 40 caracteres",
-					required : "Campo obligatorio"
-				},
-
-				birthdate : {
-					date : "Introduce una fecha válida",
-					required : "Campo obligatorio"
-				}
-			}, //fin de los mensajes
-
-			errorPlacement : function(error, element) {
-				if (element.is(":password") || element.is(":text")) {
-					error.appendTo(element.parent());
-				} else {
-					error.insertAfter(element);
-				}
-			}
-		}); //fin validate
-	}); //fin ready
-</script>
+<script
+	src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="../js/register.js" charset="UTF-8"></script>
 </head>
 <body>
 	<div id="container">
@@ -120,6 +47,7 @@
 			</div>
 			<div>
 				<input style="width: 30%;" type="submit" value="Register">
+				<a href="../index.jsp">Volver a Log In</a>
 			</div>
 		</form>
 	</div>

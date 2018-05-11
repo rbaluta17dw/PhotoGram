@@ -106,16 +106,14 @@ public class ModelUser extends Connector {
 
 	public void updateUser(User user) {
 		try {
-			PreparedStatement pst = super.conexion.prepareStatement(
-					"UPDATE users SET username=?, password=?, email=?, birthdate=?. prf_img=? where id_user=?");
+			PreparedStatement pst = super.conexion
+					.prepareStatement("UPDATE users SET username=?, password=?, email=?, birthdate=? where id_user=?");
 
 			pst.setString(1, user.getUsername());
 			pst.setString(2, user.getPassword());
 			pst.setString(3, user.getEmail());
-			java.sql.Date sqlDate = new java.sql.Date(user.getBirthdate().getTime());
-			pst.setDate(4, sqlDate);
-			pst.setInt(5, user.getPrf_img().getId_img());
-			pst.setInt(6, user.getId_user());
+			pst.setDate(4, dateToSql(user.getBirthdate()));
+			pst.setInt(5, user.getId_user());
 
 			pst.executeUpdate();
 

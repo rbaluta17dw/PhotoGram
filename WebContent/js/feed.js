@@ -7,6 +7,6 @@ $(document).ready(function() {
 	});
 	$("#plus").click(function() {
 		$('#imgupload').trigger('click');
-		$('#done').replaceWith("<input type='submit' value='Subir fichero' id='done' class='fancy-button pop-onhover bg-gradient4' />");
+		$('#done').replaceWith("<input type='submit' value='Subir fichero' id='done' />");
 	});
 });

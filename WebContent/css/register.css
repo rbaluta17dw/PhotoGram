@@ -20,10 +20,20 @@ html {
 	background: rgba(3, 3, 3, 0.25);
 	box-shadow: 1px 1px 50px #000;
 }
+/* Bordes de color rojo en los inputs en caso de error */
+input.error, select.error, textarea.error {
+	border: 2px solid red;
+}
+
+#ficha label.error {
+	color: red;
+	margin-left: 37%;
+}
 /* Heading */
-p{
+p {
 	
 }
+
 h1 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	position: relative;
@@ -33,7 +43,8 @@ h1 {
 	color: #ddd;
 	text-shadow: 3px 3px 10px #000;
 }
-h2{
+
+h2 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	position: relative;
 	margin-top: 0px;
@@ -91,10 +102,10 @@ input:focus {
 
 /* Link */
 a {
+	width: 160px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-align: center;
 	padding: 4px 8px;
-	background: rgba(107, 255, 3, 0.3);
 }
 
 a:hover {
@@ -103,4 +114,18 @@ a:hover {
 
 .orange-btn {
 	background: rgba(87, 198, 255, .5);
+}
+
+.boton {
+	color: black;
+	opacity: 0.7;
+	background-color:;
+	margin-top: 30%;
+	margin-left: 40%;
+	background: #FC3D7C;
+}
+
+.boton:hover {
+	background: #FC3D7C;
+	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
 }
