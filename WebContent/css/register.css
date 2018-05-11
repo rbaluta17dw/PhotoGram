@@ -1,0 +1,131 @@
+html {
+	background:
+		url(http://blog.hdwallsource.com/wp-content/uploads/2014/11/gradients-26042-26727-hd-wallpapers.jpg)
+		no-repeat center center fixed;
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* Login container */
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 600px;
+	height: 750px;
+	border-radius: 5px;
+	background: rgba(3, 3, 3, 0.25);
+	box-shadow: 1px 1px 50px #000;
+}
+/* Bordes de color rojo en los inputs en caso de error */
+input.error, select.error, textarea.error {
+	border: 2px solid red;
+}
+
+#ficha label.error {
+	color: red;
+	margin-left: 37%;
+}
+/* Heading */
+p {
+	
+}
+
+h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	position: relative;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 40px;
+	color: #ddd;
+	text-shadow: 3px 3px 10px #000;
+}
+
+h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	position: relative;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 20px;
+	color: #ddd;
+	text-shadow: 3px 3px 10px #000;
+}
+/* Inputs */
+a, input {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-decoration: none;
+	position: relative;
+	width: 80%;
+	display: block;
+	margin: 9px auto;
+	font-size: 17px;
+	color: #fff;
+	padding: 8px;
+	border-radius: 6px;
+	border: none;
+	background: rgba(3, 3, 3, .1);
+	-webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	-o-transition: all 2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+input {
+	width: 80%;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: 3px 3px 10px #333;
+	background: rgba(3, 3, 3, .18);
+}
+
+/* Placeholders */
+::-webkit-input-placeholder {
+	color: #ddd;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #ddd;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+	color: #ddd;
+}
+
+:-ms-input-placeholder {
+	color: #ddd;
+}
+
+/* Link */
+a {
+	width: 160px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
+	padding: 4px 8px;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+.orange-btn {
+	background: rgba(87, 198, 255, .5);
+}
+
+.boton {
+	color: black;
+	opacity: 0.7;
+	background-color:;
+	margin-top: 30%;
+	margin-left: 40%;
+	background: #FC3D7C;
+}
+
+.boton:hover {
+	background: #FC3D7C;
+	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+}
