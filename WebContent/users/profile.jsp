@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Minimal Navigation bar</title>
 <%
 	ModelUser modelUser = new ModelUser();
 	User user = (User) session.getAttribute("user");
@@ -19,6 +18,8 @@
 		usrConf = false;
 	}
 %>
+<title><%=user.getUsername() %> Profile</title>
+
 <link rel="stylesheet" href="../css/profile.css">
 
 </head>

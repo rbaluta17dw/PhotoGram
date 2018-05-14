@@ -20,7 +20,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Minimal Navigation bar</title>
+<title>Post Feed</title>
 <script src="../js/feed.js"></script>
 </head>
 
