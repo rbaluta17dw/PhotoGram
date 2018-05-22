@@ -18,7 +18,7 @@
 		usrConf = false;
 	}
 %>
-<title><%=user.getUsername() %> Profile</title>
+<title><%=user.getUsername()%> Profile</title>
 
 <link rel="stylesheet" href="../css/profile.css">
 
@@ -50,7 +50,7 @@
 			</form>
 		</div>
 		<br>
-		<form action="updateProfile.jsp" method="post" id="ficha" name="ficha">
+		<form action="../UpdateProfile" id="ficha" name="ficha">
 			<div id="profileinfo">
 				<h2><%=user.getUsername()%></h2>
 				<div class="hidden">
