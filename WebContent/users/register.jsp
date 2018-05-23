@@ -8,15 +8,19 @@
 <title>Register</title>
 <link rel="stylesheet" type="text/css" href="../css/register.css">
 <jsp:include page="../include/index.html"></jsp:include>
+
+<script src="../js/register.js" charset="UTF-8"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 <script src="../js/register.js" charset="UTF-8"></script>
 </head>
 <body>
 	<div id="container">
-		<form action="registerUser.jsp" method="post" name="ficha" id="ficha">
+		<form action="../Register" name="ficha" id="ficha">
 			<h1>FORMULARIO DE REGISTRO</h1>
 			<div>
 				<label for="username" class="label"><h2>Nombre</h2> </label> <input
@@ -43,7 +47,8 @@
 					name="birthdate" placeholder="Fecha de nacimiento" />
 			</div>
 			<div>
-				<input style="width: 30%;" type="submit" value="Register">
+				<input style="width: 30%;" type="submit" value="Register"> <a
+					href="../index.jsp">Volver a Log In</a>
 			</div>
 		</form>
 	</div>

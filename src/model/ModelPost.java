@@ -16,7 +16,7 @@ public class ModelPost extends Connector {
 
 	public ArrayList<Post> selectAll() {
 		ArrayList<Post> posts = new ArrayList<Post>();
-		String sql = "SELECT * FROM posts";
+		String sql = "SELECT * FROM posts ORDER BY id_post DESC";
 		try {
 			Statement stt = super.conexion.createStatement();
 			ResultSet rst = stt.executeQuery(sql);

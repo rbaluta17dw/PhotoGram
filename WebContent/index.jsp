@@ -22,12 +22,13 @@
 			src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 		</span>
 
-		<form action="users/login.jsp" method="post">
+		<form action="Login">
 			<input type="text" name="username" placeholder="Username"
-				value="Champinon"> <input type="password" name="password"
-				placeholder="Password" value="password"> <input
+				value="Championcito"> <input type="password" name="password"
+				placeholder="Password" value="123456789"> <input
 				type="submit" value="Log In"> <input type="button"
-				name="register" value="registrar" onclick="window.location='users/register.jsp';">
+				name="register" value="registrar"
+				onclick="window.location='users/register.jsp';">
 			<div id="remember-container">
 				<input type="checkbox" id="checkbox-2-1" class="checkbox"
 					checked="checked" /> <span id="remember">Remember me</span>

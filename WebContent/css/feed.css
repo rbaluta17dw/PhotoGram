@@ -1,5 +1,15 @@
 @CHARSET "ISO-8859-1";
 
+html {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+	width: 0;
+	background-color: transparent;
+}
+
 #feed {
 	width: 40%;
 	height: auto;
@@ -44,13 +54,13 @@
 	padding: 10px;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: black;
 	transition: all .2s ease-in-out;
 }
 
-a:hover{
+a:hover {
 	color: pink;
 	opacity: 0.8;
 }
@@ -77,9 +87,8 @@ a:hover{
 #plus {
 	width: 15%;
 	height: 15%;
-	position: relative;
-	top: 40%;
-	left: 40%;
+	margin-top: 25%;
+	margin-left: 40%;
 }
 
 #imgcont:hover {
@@ -92,4 +101,18 @@ a:hover{
 #getimg {
 	text-decoration: none;
 	color: green;
+}
+
+#done {
+	color: black;
+	opacity: 0.7;
+	background-color:;
+	margin-top: 30%;
+	margin-left: 40%;
+	background: #FC3D7C;
+}
+
+#done:hover {
+	background: #FC3D7C;
+	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
 }
