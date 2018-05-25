@@ -116,3 +116,13 @@ a:hover {
 	background: #FC3D7C;
 	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
 }
+
+.anteoptions {
+	background-image: url("https://cdn3.iconfinder.com/data/icons/virtual-notebook/128/button_switch_vertical-256.png");
+	background-size: contain;
+	margin-top: 15px;
+	width: 40px;
+	height: 40px;
+	float: right;
+	cursor: pointer;
+}

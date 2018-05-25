@@ -3,7 +3,10 @@
 <%@ page import="model.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-	
+	User user = (User) session.getAttribute("user");
+	if (user != null) {
+		response.sendRedirect("../posts/feed.jsp");
+	}
 %>
 <html lang="en">
 <head>
@@ -22,12 +25,12 @@
 			src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 		</span>
 
-		<form action="users/login.jsp" method="post">
-			<input type="text" name="username" placeholder="Username"
-				value="Champinon"> <input type="password" name="password"
-				placeholder="Password" value="password"> <input
+		<form action="Login">
+			<input type="text" name="username" placeholder="Username"> <input
+				type="password" name="password" placeholder="Password"> <input
 				type="submit" value="Log In"> <input type="button"
-				name="register" value="registrar" onclick="window.location='users/register.jsp';">
+				name="register" value="registrar"
+				onclick="window.location='users/register.jsp';">
 			<div id="remember-container">
 				<input type="checkbox" id="checkbox-2-1" class="checkbox"
 					checked="checked" /> <span id="remember">Remember me</span>

@@ -6,8 +6,8 @@ $(document).ready(function() {
 	$("#delete").click(function() {
 		window.location.replace("deleteUser.jsp");
 	});
-	$(".usrconf").click(function(){
-		$('#imgupload').trigger('click');
+	$("#profileimg").click(function() {
+		$('#imgupdate').trigger('click');
 	});
 	$("#ficha").validate({
 		rules : {
