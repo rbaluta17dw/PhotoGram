@@ -64,7 +64,7 @@
 						type="submit" value="Guardar cambios" class="boton"> <input
 						type="button" id="delete" value="Eliminar cuenta" class="boton">
 				</div>
-				<br> <b>Posts: 0</b>
+				<br> <b>Posts: <%=modelUser.postAmount(user.getId_user())%></b>
 				<div>
 					<br>
 				</div>

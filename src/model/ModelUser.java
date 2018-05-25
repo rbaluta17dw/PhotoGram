@@ -141,7 +141,7 @@ public class ModelUser extends Connector {
 
 	public void updateImgUser(User user) {
 		try {
-			PreparedStatement pst = super.conexion.prepareStatement("UPDATE users SET prf_img where id_user=?");
+			PreparedStatement pst = super.conexion.prepareStatement("UPDATE users SET prf_img=? where id_user=?");
 
 			pst.setInt(1, user.getPrf_img().getId_img());
 			pst.setInt(2, user.getId_user());
@@ -152,6 +152,24 @@ public class ModelUser extends Connector {
 
 			e.printStackTrace();
 		}
+
+	}
+
+	public int postAmount(int id_usr) {
+		int amount = 0;
+		String sql = "SELECT * FROM posts WHERE id_usr = " + id_usr;
+		try {
+			Statement stt = super.conexion.createStatement();
+			ResultSet rst = stt.executeQuery(sql);
+			while (rst.next()) {
+				amount++;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return amount;
 
 	}
 

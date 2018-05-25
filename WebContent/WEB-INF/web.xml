@@ -41,6 +41,7 @@
 		<url-pattern>/UpdateProfile</url-pattern>
 	</servlet-mapping>
 
+
 	<!-- Fin de la publicacion de servlets -->
 
 </web-app>

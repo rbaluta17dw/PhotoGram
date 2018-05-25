@@ -21,7 +21,7 @@ public class Register extends HttpServlet {
 		ModelUser userModel = new ModelUser();
 
 		// Recibe parametros de la pagina register.jsp
-		String username = request.getParameter("username");
+		String username = request.getParameter("username").toLowerCase();
 		// Al recibir la contraseña la encriptamos
 		String password = BCrypt.hashpw(request.getParameter("password"), BCrypt.gensalt(12));
 		String email = request.getParameter("email");

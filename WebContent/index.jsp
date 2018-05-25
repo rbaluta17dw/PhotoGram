@@ -3,7 +3,10 @@
 <%@ page import="model.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-	
+	User user = (User) session.getAttribute("user");
+	if (user != null) {
+		response.sendRedirect("../posts/feed.jsp");
+	}
 %>
 <html lang="en">
 <head>
@@ -23,9 +26,8 @@
 		</span>
 
 		<form action="Login">
-			<input type="text" name="username" placeholder="Username"
-				value="Championcito"> <input type="password" name="password"
-				placeholder="Password" value="123456789"> <input
+			<input type="text" name="username" placeholder="Username"> <input
+				type="password" name="password" placeholder="Password"> <input
 				type="submit" value="Log In"> <input type="button"
 				name="register" value="registrar"
 				onclick="window.location='users/register.jsp';">
