@@ -70,7 +70,9 @@
 				</div>
 			</div>
 		</form>
-
+		<div id="contPost">
+		<div class="post"></div>
+		</div>
 	</div>
 
 </body>
