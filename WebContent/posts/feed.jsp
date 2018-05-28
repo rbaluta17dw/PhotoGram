@@ -40,6 +40,13 @@
 					src="../images/<%=post.getId_usr().getPrf_img().getUrl()%>">
 				<a
 					href="../users/profile.jsp?username=<%=post.getId_usr().getUsername()%>"><%=post.getId_usr().getUsername()%></a>
+				<%
+					if (post.getId_usr().getId_user() == user.getId_user()) {
+				%>
+				<div class="anteoptions"></div>
+				<%
+					}
+				%>
 			</div>
 			<img class="image" alt="<%=post.getImg().getName()%>"
 				src="../images/<%=post.getImg().getUrl()%>">

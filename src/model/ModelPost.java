@@ -23,11 +23,34 @@ public class ModelPost extends Connector {
 			while (rst.next()) {
 				Post post = new Post();
 				post.setId_post(rst.getInt("id_post"));
-				;
 				post.setImg(modelImage.selectImageID(rst.getInt("id_img")));
 				post.setId_usr(modelUser.selectUserID(rst.getInt("id_usr")));
 				post.setDesc(rst.getString("descrip"));
 				post.setUp_date(rst.getDate("up_date"));
+				posts.add(post);
+			}
+			return posts;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return posts;
+	}
+
+	public ArrayList<Post> selectAllPorId(User user) {
+		ArrayList<Post> posts = new ArrayList<Post>();
+		String sql = "SELECT * FROM posts WHERE id_usr = " + user.getId_user() + " ORDER BY id_post DESC";
+		try {
+			Statement stt = super.conexion.createStatement();
+			ResultSet rst = stt.executeQuery(sql);
+
+			while (rst.next()) {
+				Post post = new Post();
+				post.setId_post(rst.getInt("id_post"));
+				post.setImg(modelImage.selectImageID(rst.getInt("id_img")));
+				post.setId_usr(modelUser.selectUserID(rst.getInt("id_usr")));
+				post.setDesc(rst.getString("descrip"));
+				post.setUp_date(rst.getDate("up_date"));
+
 				posts.add(post);
 			}
 			return posts;

@@ -19,7 +19,7 @@ public class Login extends HttpServlet {
 
 		// Recibe parametros de la pagina index.jsp
 
-		String username = request.getParameter("username");
+		String username = request.getParameter("username").toLowerCase();
 		String password = request.getParameter("password");
 
 		// Creamos el usuario para luego utilizarlo

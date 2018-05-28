@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="model.*"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -64,13 +66,47 @@
 						type="submit" value="Guardar cambios" class="boton"> <input
 						type="button" id="delete" value="Eliminar cuenta" class="boton">
 				</div>
-				<br> <b>Posts: 0</b>
+				<br> <b>Posts: <%=modelUser.postAmount(user.getId_user())%></b>
 				<div>
 					<br>
 				</div>
 			</div>
 		</form>
-
+		<div id="contPost">
+			<div class="post">
+		<%
+			ModelPost modelPost = new ModelPost();
+			ArrayList<Post> posts = modelPost.selectAllPorId(user);
+			Iterator<Post> i = posts.iterator();
+			Post post;
+			while (i.hasNext()) {
+				post = i.next();
+		%>
+		<div class="post">
+			<div class="user">
+				<img class="profile" alt="<%=post.getId_usr().getPrf_img()%>"
+					src="../images/<%=post.getId_usr().getPrf_img().getUrl()%>">
+				<a
+					href="../users/profile.jsp?username=<%=post.getId_usr().getUsername()%>"><%=post.getId_usr().getUsername()%></a>
+				<%
+					if (post.getId_usr().getId_user() == user.getId_user()) {
+				%>
+				<div class="anteoptions"></div>
+				<%
+					}
+				%>
+			</div>
+			<div class="post">
+			<img class="image" alt="<%=post.getImg().getName()%>"
+				src="../images/<%=post.getImg().getUrl()%>"></div>
+			</div>
+			
+			
+			<% } %>			
+			
+		</div>
+			
+		
 	</div>
 
 </body>
