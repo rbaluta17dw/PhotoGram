@@ -22,7 +22,7 @@
 <meta charset="UTF-8">
 <title>Post Feed</title>
 <script src="../js/feed.js"></script>
-</head>
+</head>-
 
 <body>
 	<jsp:include page="../include/nav.html"></jsp:include>

@@ -54,12 +54,13 @@
 			<div id="profileinfo">
 				<h2><%=user.getUsername()%></h2>
 				<div class="hidden">
-					<input type="text" name="username" placeholder="Username"><br>
-					<input type="password" name="password"
-						placeholder="Actual Password"><br> <input
+					<input type="text" name="username" value="<%=user.getUsername()%>"
+						placeholder="Username"><br> <input type="password"
+						name="password" placeholder="Actual Password"><br> <input
 						type="password" name="repassword" placeholder="Nueva Password"><br>
-					<input type="email" name="email" placeholder="new email"><br>
-					<input type="date" name="birthdate"
+					<input type="email" name="email" value="<%=user.getEmail()%>"
+						placeholder="new email"><br> <input type="date"
+						name="birthdate" value="<%=user.getBirthdate()%>"
 						placeholder="Fecha de nacimiento"><br> <input
 						type="submit" value="Guardar cambios" class="boton"> <input
 						type="button" id="delete" value="Eliminar cuenta" class="boton">
@@ -71,7 +72,7 @@
 			</div>
 		</form>
 		<div id="contPost">
-		<div class="post"></div>
+			<div class="post"></div>
 		</div>
 	</div>
 
