@@ -91,7 +91,7 @@
 				<%
 					if (post.getId_usr().getId_user() == user.getId_user()) {
 				%>
-				<div class="anteoptions"></div>
+				<div><a href="../posts/deletePost.jsp?id_post=<%post.getId_post();%>"></a></div>
 				<%
 					}
 				%>

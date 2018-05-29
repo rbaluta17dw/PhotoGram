@@ -49,7 +49,8 @@ public class Login extends HttpServlet {
 			session.setAttribute("user", user);
 
 			// Envio la pagina de publicaciones
-			response.sendRedirect("posts/feed.jsp");
+			//response.sendRedirect("posts/feed.jsp");
+			response.sendRedirect("Feed");
 
 		} else {
 			/*
