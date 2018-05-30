@@ -1,6 +1,5 @@
 # PhotoGram
 <p>Website for sharing and uploading images</p>
-<a href="https://github.com/rbaluta17dw/PhotoGram"><img src="https://image.ibb.co/cGSvyJ/instagram_PNG3.png" alt="instagram_PNG3" border="0" width="100" height="100"></a>
 
 [![Join the chat at https://gitter.im/PhotoGramProject/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PhotoGramProject/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
