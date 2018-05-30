@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$("#upload").fadeToggle();
 	});
 	$("#user").click(function() {
-		window.location.replace("../users/profile.jsp");
+		window.location.replace("Profile");
 	});
 	$("#plus").click(function() {
 		$('#imgupload').trigger('click');
@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$(this).css("background-image", "url(https://cdn2.iconfinder.com/data/icons/credocon/512/bin-256.png)")
 		$(this).addClass("eliminar");
 		$(".eliminar").click(function(){
-			window.location.replace("../DeletePost");
+			window.location.replace("DeletePost");
 		});
 	});
 	
