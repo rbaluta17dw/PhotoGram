@@ -12,7 +12,7 @@
 <script src="js/feed.js"></script>
 <link rel="stylesheet" href="css/profile.css">
 <link rel="stylesheet" href="css/nav.css">
-<script src="js/feed.js"></script>
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 		</c:if>
 
 		<div>
-			<form action="updateImage.jsp" method="post"
+			<form action="users/updateImage.jsp" method="post"
 				enctype="multipart/form-data" action="../posts/upload.jsp">
 				<div class="prfl">
 					<input name="file" type="file" id="imgupdate" style="display: none" />
@@ -61,11 +61,15 @@
 	<div id="contPost">
 		<c:forEach items="${posts}" var="post">
 			<div class="post">
-				<img class="image" alt="${post.img.name}"
-					src="images/${post.img.url}">
+				<a href="Post?id_post=${post.id_post}"> <img class="image"
+					alt="${post.img.name}" src="images/${post.img.url}">
+				</a>
 			</div>
 		</c:forEach>
 	</div>
 </body>
-<script src="../js/profile.js"></script>
+<script src="js/profile.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </html>

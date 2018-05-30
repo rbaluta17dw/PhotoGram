@@ -50,7 +50,7 @@
 				userModel.updateImgUser(user);
 				//out.println(modelImage.selectImageName(name));
 
-				response.sendRedirect("../users/profile.jsp");
+				response.sendRedirect("Profile");
 				//out.println(post);
 			}
 

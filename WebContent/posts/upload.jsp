@@ -12,7 +12,7 @@
 	ModelImage modelImage = new ModelImage();
 	ModelPost modelPost = new ModelPost();
 
-	String desc = "reeeeeeeeeeee";
+	String desc = " ";
 
 	//creaa una imagen, un usuario y una publicacion
 	User user = (User) session.getAttribute("user");
@@ -58,7 +58,7 @@
 
 				//out.println(modelImage.selectImageName(name));
 
-				response.sendRedirect("feed.jsp");
+				response.sendRedirect("Feed");
 				//out.println(post);
 			}
 

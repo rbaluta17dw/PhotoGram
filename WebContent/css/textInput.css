@@ -1,0 +1,78 @@
+@CHARSET "ISO-8859-1";
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+body .sexy_field {
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100px;
+	right: 0;
+	font-family: "Oswald", sans-serif;
+	width: 300px;
+}
+
+body label {
+	font-size: 30px;
+	position: absolute;
+	text-shadow: 0px 2px rgba(0, 0, 0, 0.26);
+	height: 100px;
+	left: 0;
+	width: 400px;
+	color: white;
+	top: 23px;
+	z-index: -1;
+	transition-duration: 0.2s;
+	transition-property: transform;
+}
+
+body input {
+	border: none;
+	padding: 40px 0px 20px 0px;
+	box-shadow: 0px 3px white, 0px 5px rgba(0, 0, 0, 0.16);
+	color: white;
+	text-shadow: 0px 2px rgba(0, 0, 0, 0.26);
+	background: transparent;
+	outline: none;
+	height: 30px;
+	font-family: "Oswald", sans-serif;
+	width: 300px;
+	transition-property: transform;
+	font-size: 26px;
+}
+
+body input:focus+label {
+	transform: translateY(-45px) translateX(-80px) scale(0.6);
+}
+
+body label:after {
+	content: "";
+	box-shadow: inset 8px -8px 0 white, -3px 4px 0 rgba(0, 0, 0, 0.26);
+	position: absolute;
+	top: 20px;
+	right: -100px;
+	height: 28px;
+	transition-duration: 0.1s;
+	transition-property: transform;
+	transform: rotate(-45deg) scale(0.6);
+	width: 60px;
+	float: right;
+	display: block;
+	margin: 50px auto;
+}
+
+body input:valid+label {
+	transform: translateY(-45px) translateX(-80px) scale(0.6);
+}
+
+body input:valid+label::after {
+	display: block;
+	transform: translateX(-10px) rotate(-45deg);
+}
+
+body input:invalid+label::after {
+	transform: translateX(100px) rotate(-45deg);
+}

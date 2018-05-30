@@ -23,12 +23,9 @@
 					<img class="profile" alt="${post.id_usr.prf_img}"
 						src="images/${post.id_usr.prf_img.url}"> <a
 						href="Profile?username=${post.id_usr.username}">${post.id_usr.username}</a>
-					<c:if test="${post.id_usr.id_user == user.id_user}">
-						<div class="anteoptions"></div>
-					</c:if>
 				</div>
-				<img class="image" alt="${post.img.url}"
-					src="images/${post.img.url}">
+				<a href="Post?id_post=${post.id_post}"> <img class="image"
+					alt="${post.img.url}" src="images/${post.img.url}"></a>
 				<div class="info">
 					${post.desc}<br> ${post.up_date}
 				</div>
