@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$(".hidden").toggle();
 	});
 	$("#delete").click(function() {
-		window.location.replace("deletePost.jsp");
+		window.location.replace("deleteUser.jsp");
 	});
 	$("#profileimg").click(function() {
 		$('#imgupdate').trigger('click');

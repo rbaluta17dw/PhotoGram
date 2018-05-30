@@ -48,10 +48,8 @@ public class Login extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
 
-			// Envio la pagina de publicaciones
-			//response.sendRedirect("posts/feed.jsp");
+			// Envio al controlador de las publicaciones
 			response.sendRedirect("Feed");
-
 		} else {
 			/*
 			 * Si la contraseña y el usuario no coinciden devuelve a la pagina

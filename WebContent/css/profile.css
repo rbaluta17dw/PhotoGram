@@ -1,4 +1,56 @@
 /* main.css */
+#upload {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 49px;
+	display: none;
+}
+
+#imgcont {
+	width: 40%;
+	height: 60%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 0.8%;
+	margin: 40px auto;
+	background-color: #efefef;
+	transition: all .2s ease-in-out;
+}
+
+#plus {
+	width: 15%;
+	height: 15%;
+	margin-top: 25%;
+	margin-left: 40%;
+}
+
+#imgcont:hover {
+	-webkit-box-shadow: inset 0px 0px 29px -1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: inset 0px 0px 29px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: inset 0px 0px 29px -1px rgba(0, 0, 0, 0.75);
+	transform: scale(0.99);
+}
+
+#getimg {
+	text-decoration: none;
+	color: green;
+}
+
+#done {
+	color: black;
+	opacity: 0.7;
+	background-color:;
+	margin-top: 30%;
+	margin-left: 40%;
+	background: #FC3D7C;
+}
+
+#done:hover {
+	background: #FC3D7C;
+	background: linear-gradient(-25deg, #FC3D7C 0%, #F76A34 80%, #F76A34 100%);
+}
+
 .usrconf {
 	display: all;
 	transition: all .2s ease-in-out;
@@ -83,25 +135,41 @@ input {
 	line-height: 25px;
 }
 
-#contPost{
-	position: relative;
-	top: 100px;
-	width: 40%;
-	height: 40%;
-	background-color: blue;
+#contPost {
+	margin: 100px auto;
+	width: 50%;
+	height: auto;
 }
 
-.post{
+.post {
 	width: 20%;
-	height: 200px;
-	background-color: red;
+	float: left;
 }
 
 .image {
-	width: 200px;
-	height: 200px;
-	margin-bottom: 15px;
-	-webkit-box-shadow: -4px 18px 38px -14px rgba(117, 117, 117, 1);
-	-moz-box-shadow: -4px 18px 38px -14px rgba(117, 117, 117, 1);
-	box-shadow: -4px 18px 38px -14px rgba(117, 117, 117, 1);
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+	transition: all .2s ease-in-out;
+}
+
+.image:hover {
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	transition: all .2s ease-in-out;
+}
+
+a:hover {
+	color: pink;
+	opacity: 0.8;
 }
