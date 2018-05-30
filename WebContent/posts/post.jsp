@@ -32,9 +32,8 @@
 			<div class="info">
 				<c:if test="${post.id_usr.id_user == user.id_user}">
 					<div class='sexy_field'>
-						<input required='required'> <label> Inserta la descripcion de la publicacion </label>
+						<input placeholder="${post.desc}" required='required'>
 					</div>
-
 				</c:if>
 				${post.desc}<br> ${post.up_date}
 			</div>
